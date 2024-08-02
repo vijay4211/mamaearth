@@ -8,6 +8,7 @@ export const productList = [
     priceCount: "499",
     imageUrl:
       "https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg?format=auto&width=400&height=400",
+    tag: "BEST SELLER",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const productList = [
     priceCount: "499",
     imageUrl:
       "https://images.mamaearth.in/catalog/product/r/i/rice-fw-1.jpg?format=auto&width=400&height=400",
+    tag: "BEST SELLER",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const productList = [
     priceCount: "499",
     imageUrl:
       "https://images.mamaearth.in/catalog/product/v/i/vit-c-face-wash-1.jpg?format=auto&width=400&height=400",
+    tag: "BEST SELLER",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const productList = [
     priceCount: "499",
     imageUrl:
       "https://images.mamaearth.in/catalog/product/1/-/1-with-ingredients_3.jpg?format=auto&width=400&height=400",
+    tag: "TRENDING",
   },
   {
     id: 5,

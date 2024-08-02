@@ -10,7 +10,7 @@ function HomeScreen() {
 
   return (
     <div className="sm:px-32 sm:mt-14">
-      {name}
+      <h1>{name}</h1>
       <Sections />
       <div className="grid grid-cols-2  sm:grid-cols-4 gap-2">
         {productList.map((product, index) => {
@@ -24,6 +24,7 @@ function HomeScreen() {
               reviewCount={product.reviewCount}
               priceCount={product.priceCount}
               imageUrl={product.imageUrl}
+              tag = {product.tag}
             />
           );
         })}

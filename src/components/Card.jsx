@@ -9,9 +9,10 @@ function Card({
   starCount,
   reviewCount,
   priceCount,
+  tag,
 }) {
   return (
-    <div className=" border shadow-2xl px-3  sm:px-0 sm:shadow-none">
+    <div className="border shadow-2xl px-3  sm:px-0 sm:shadow-none sm:rounded-tl-lg relative">
       <img className="w-full" src={imageUrl} alt="" />
 
       <div className=" ">
@@ -47,6 +48,18 @@ function Card({
           <button className="py-2 text-white font-medium ">ADD TO CART</button>
         </div>
       </div>
+
+      {tag === "BEST SELLER" && (
+        <div className="absolute top-0 bg-blue-300 text-white text-xs px-3 py-1 rounded-tl-md rounded-br-md">
+          Best Seller
+        </div>
+      )}
+
+      {tag === "TRENDING" && (
+        <div className="absolute top-0 bg-orange-400 text-white text-xs px-3 py-1 rounded-tl-md rounded-br-md ">
+          TRENDING
+        </div>
+      )}
     </div>
   );
 }
