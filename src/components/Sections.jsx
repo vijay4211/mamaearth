@@ -5,7 +5,7 @@ const Sections = () => {
   return (
     <div className="py-2 px-3 flex sm:justify-evenly justify-between items-center">
       <div>
-        <p className="text-md font-medium">Best Sellers</p>
+        <p className="text-md font-medium sm:text-2xl">Best Sellers</p>
 
         <p className="hidden my-4 font-serif sm:block ">
           Explore best-selling safe, natural, and 100% toxin-free baby and

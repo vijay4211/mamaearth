@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import HomeScreen from "./components/HomeScreen";
 import ListBar from "./components/ListBar";
 import Banner from "./components/Banner";
+import CardDetailing from "./components/card/CardDetailing";
+
 
 //create Context
 export const countContext = createContext();
@@ -19,7 +21,7 @@ function App() {
         <ListBar />
         <Banner />
         <HomeScreen />
-      
+        <CardDetailing />
       </div>
     </countContext.Provider>
   );

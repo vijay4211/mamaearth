@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { countContext } from "../App";
 import Sections from "./Sections";
-import Card from "./Card";
+
 import { productList } from "../data/Data";
+import Card from "./card/Card";
 
 function HomeScreen() {
   const { name } = useContext(countContext);

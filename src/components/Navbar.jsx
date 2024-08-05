@@ -14,8 +14,6 @@ const Navbar = () => {
 
   return (
     <div>
-
-
       <div className="flex justify-between bg-red-500 text-white text-xs px-8 py-2 w-full">
         <a href="#" className="hidden sm:block">
           Asia's 1st Brand with MADE SAFE Certified Productions
@@ -26,18 +24,9 @@ const Navbar = () => {
         </a>
       </div>
 
-
-
-
-
-
       {/* =======================For Desktop Responsive======================== */}
       {/* ===================Search Bar==================== */}
       <div className="flex justify-between sm:justify-evenly  items-center  py-2 px-2 sm:px-20 border">
-       
-       
-       
-       
         <div>
           <img
             className=" sm:w-32 w-28"
@@ -45,10 +34,6 @@ const Navbar = () => {
             alt="Image"
           />
         </div>
-
-
-
-
 
         <div className="hidden sm:flex  rounded-md w-1/2 border">
           <div className="mt-2 px-1">
@@ -72,20 +57,11 @@ const Navbar = () => {
               <button>Search</button>
             </div>
           </div>
-
-          
         </div>
-
-
-
-
 
         <div className="">
           <img src={earth} alt="" className="h-10 hidden sm:block" />
         </div>
-
-
-
 
         <div className="flex gap-6">
           <div className="flex items-center gap-2">
@@ -98,28 +74,13 @@ const Navbar = () => {
             <h5 className=" hidden sm:block"> Login</h5>
           </div>
         </div>
-
-
-
-
-
       </div>
-
-
-
-
-
 
       {/* =======================For Mobile Responsive======================== */}
       <div className="flex rounded-md w-full border sm:hidden">
-       
-       
-       
         <div className="mt-2 px-1">
           <IoIosSearch className="text-xl" />
         </div>
-
-
 
         <div className="mx-3 my-1 w-full border-green-900">
           <input
@@ -131,25 +92,16 @@ const Navbar = () => {
           />
         </div>
 
-
-
-        <div className="flex align-middle bg-blue-300 px-3 py-1 gap-1 w-24 rounded-tr-md rounded-br-md">
+        <div className=" hidden sm:flex align-middle bg-blue-300 px-3 py-1 gap-1 w-24 rounded-tr-md rounded-br-md">
           <div className="mt-1">
             <IoIosSearch className="text-xl" />
           </div>
+
           <div className="">
             <button>Search</button>
           </div>
         </div>
-
-
-
-
       </div>
-
-
-
-
     </div>
   );
 };
