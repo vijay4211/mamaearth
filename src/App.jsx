@@ -13,14 +13,19 @@ function App() {
   //define state
   const [name, setName] = useState();
 
+  //navbar
+
   return (
     <countContext.Provider value={{ name, setName }}>
-      <BrowserRouter> 
+      <BrowserRouter>
+        {/* <NavbarShow>
+        
+        </NavbarShow> */}
         <Navbar />
         <Routes>
           <Route path="" element={<HomeScreen />} />
           <Route path="/productDetails" element={<ProductDetails />} />
-          <Route path="checkoutpage" element={< CheckoutPage/>}/>
+          <Route path="checkoutpage" element={<CheckoutPage />} />
         </Routes>
       </BrowserRouter>
     </countContext.Provider>
