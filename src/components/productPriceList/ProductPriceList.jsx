@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductPriceList = () => {
   return (
-    <div className="bg-red-200 overflow-auto flex gap-2 sm:flex sm:flex-wrap ">
+    <div className="overflow-auto flex gap-2 sm:flex sm:flex-wrap ">
       <div className="flex sm:flex gap-2 mb-3">
         <div className="border-2 border-green-600 rounded-xl">
           <p className=" px-3 py-1 rounded-tr-lg rounded-tl-lg font-semibold  bg-green-600 text-white">

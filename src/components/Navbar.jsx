@@ -5,6 +5,7 @@ import { FiUser } from "react-icons/fi";
 import earth from "../assets/img-1.svg";
 
 import { countContext } from "../App";
+import ListBar from "./ListBar";
 const Navbar = () => {
   const { name, setName } = useContext(countContext);
 
@@ -13,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div className="bg-red- shadow-lg">
       <div className="flex justify-between bg-red-500 text-white text-xs px-8 py-2 w-full">
         <a href="#" className="hidden sm:block">
           Asia's 1st Brand with MADE SAFE Certified Productions
@@ -102,6 +103,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <ListBar />
     </div>
   );
 };

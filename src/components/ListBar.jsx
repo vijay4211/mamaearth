@@ -1,6 +1,6 @@
 function ListBar() {
   return (
-    <div className="sm:flex justify-around px-28 py-1 text-xs hidden">
+    <div className="sm:flex justify-around px-28 py-3 text-xs hidden">
       <div>HOME</div>
       <div>FACE</div>
       <div>HAIR</div>

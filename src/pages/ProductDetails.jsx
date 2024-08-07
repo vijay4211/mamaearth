@@ -1,13 +1,13 @@
-import ImageSlider from "../imageSlider/ImageSlider";
-import ProductPriceList from "../productPriceList/ProductPriceList";
+import ImageSlider from "../components/imageSlider/ImageSlider";
+import ProductAddToCard from "../components/productPriceList/ProductAddToCard";
+import ProductPriceList from "../components/productPriceList/ProductPriceList";
 import { CiStar } from "react-icons/ci";
 
-function CardDetailing() {
+function ProductDetails() {
   return (
     <>
-      <div className="sm:flex  sm:px-28 sm:gap-3">
+      <div className=" sm:flex sm:px-28 sm:gap-3 sm:h-lvh">
         {/* Left Side */}
-
         <ImageSlider />
 
         <div className="mt-7 px-2  sm:px-0 sm:mt-0 w-full sm:w-2/3">
@@ -64,8 +64,10 @@ function CardDetailing() {
 
           <ProductPriceList />
         </div>
+
+        <ProductAddToCard />
       </div>
     </>
   );
 }
-export default CardDetailing;
+export default ProductDetails;

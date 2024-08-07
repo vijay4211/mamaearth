@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import { countContext } from "../App";
-import Sections from "./Sections";
+import Sections from "../components/Sections";
 
 import { productList } from "../data/Data";
-import Card from "./card/Card";
+import Card from "../components/card/Card";
+import Banner from "../components/Banner";
 
 function HomeScreen() {
   const { name } = useContext(countContext);
-  //   console.log(productList);
 
   return (
     <div className="sm:px-32 sm:mt-14">
       <h1>{name}</h1>
+      <Banner />
       <Sections />
       <div className="grid grid-cols-2  sm:grid-cols-4 gap-2">
         {productList.map((product, index) => {
@@ -25,7 +26,7 @@ function HomeScreen() {
               reviewCount={product.reviewCount}
               priceCount={product.priceCount}
               imageUrl={product.imageUrl}
-              tag = {product.tag}
+              tag={product.tag}
             />
           );
         })}
