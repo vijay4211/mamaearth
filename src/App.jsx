@@ -18,13 +18,10 @@ function App() {
   return (
     <countContext.Provider value={{ name, setName }}>
       <BrowserRouter>
-        {/* <NavbarShow>
-        
-        </NavbarShow> */}
         <Navbar />
         <Routes>
           <Route path="" element={<HomeScreen />} />
-          <Route path="/productDetails" element={<ProductDetails />} />
+          <Route path="/productDetails/:id" element={<ProductDetails />} />
           <Route path="checkoutpage" element={<CheckoutPage />} />
         </Routes>
       </BrowserRouter>

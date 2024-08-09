@@ -1,9 +1,20 @@
+import { useParams } from "react-router-dom";
 import ImageSlider from "../components/imageSlider/ImageSlider";
 import ProductAddToCard from "../components/productPriceList/ProductAddToCard";
 import ProductPriceList from "../components/productPriceList/ProductPriceList";
 import { CiStar } from "react-icons/ci";
+import { TiTickOutline } from "react-icons/ti";
 
 function ProductDetails() {
+  // useParams
+  const { id } = useParams();
+  console.log(id);
+
+  const data = {
+    title:
+      "  Onion Shampoo for Hair Fall Control and Hair Growth with Onion & Plant Keratin - 650 ml",
+  };
+
   return (
     <>
       <div className=" sm:flex sm:px-28 sm:gap-3 sm:h-lvh">
@@ -21,8 +32,9 @@ function ProductDetails() {
               Hair-Shampoo <span>&gt; </span>
             </span>
             <span>
-              Onion Shampoo for Hair Fall Control and Hair Growth with Onion &
-              Plant Keratin - 650 ml
+              {/* Onion Shampoo for Hair Fall Control and Hair Growth with Onion &
+              Plant Keratin - 650 ml */}
+              {title}
             </span>
           </div>
 

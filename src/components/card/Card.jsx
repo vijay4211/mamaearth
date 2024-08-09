@@ -3,6 +3,8 @@ import { IoStarSharp } from "react-icons/io5";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 
 function Card({
+  id,
+  clickHandler,
   imageUrl,
   title,
   descrition,
@@ -12,8 +14,8 @@ function Card({
   tag,
 }) {
   return (
-    <div className="border shadow-2xl px-3  sm:px-0 sm:shadow-none sm:rounded-tl-lg relative">
-      <img className="w-full" src={imageUrl} alt="" />
+    <div className="border shadow-2xl px-3  sm:px-0 sm:shadow-none sm:rounded-tl-lg relative bg-red-500" onClick={()=> clickHandler(id)}>
+      <img className="w-full" src={imageUrl} alt=""/>
 
       <div className=" ">
         <p className="py-1 text-center text-sm sm:text-lg font-semibold px-2 sm:p-3 h-24">
