@@ -3,17 +3,15 @@ import ImageSlider from "../components/imageSlider/ImageSlider";
 import ProductAddToCard from "../components/productPriceList/ProductAddToCard";
 import ProductPriceList from "../components/productPriceList/ProductPriceList";
 import { CiStar } from "react-icons/ci";
-import { TiTickOutline } from "react-icons/ti";
+import { productList } from "../data/Data";
 
 function ProductDetails() {
   // useParams
   const { id } = useParams();
-  console.log(id);
+  // console.log(id); //1
 
-  const data = {
-    title:
-      "  Onion Shampoo for Hair Fall Control and Hair Growth with Onion & Plant Keratin - 650 ml",
-  };
+  const findProductData = productList.find((item) => item.id == id);
+  console.log(findProductData); //1
 
   return (
     <>
@@ -31,36 +29,31 @@ function ProductDetails() {
             <span>
               Hair-Shampoo <span>&gt; </span>
             </span>
-            <span>
-              {/* Onion Shampoo for Hair Fall Control and Hair Growth with Onion &
-              Plant Keratin - 650 ml */}
-              {title}
-            </span>
+            <span>{findProductData.title}</span>
           </div>
 
-          <p className="text-xl mt-2 mb-3">
-            Onion Shampoo with Onion & Plant Keratin for Hair Fall Control -
-            400ml
-          </p>
+          <p className="text-xl mt-2 mb-3">{findProductData.title}</p>
 
           <p className="text-xl my-2 text-gray-600">
-            Reduces Hair Fall | Strengthens Hair | Softens Hair
+            {findProductData.description}
           </p>
 
           <div className="flex gap-3">
             <div className="flex items-center gap-1">
-              <p className="text-md">4.7</p>
+              <p className="text-md">{findProductData.starCount}</p>
               <CiStar className="text-xs text-orange-500" />
             </div>
             <div>
-              <p className="text-md text-blue-400 font-semibold">873 Reviews</p>
+              <p className="text-md text-blue-400 font-semibold">
+                {findProductData.reviewCount}
+              </p>
             </div>
           </div>
 
           <div className="flex gap-1">
             <div className="text-xl font-semibold">
               <span className="">&#8377;</span>
-              <span>349.00</span>
+              <span>{findProductData.priceCount}</span>
             </div>
             <div className="flex items-end">
               {" "}
