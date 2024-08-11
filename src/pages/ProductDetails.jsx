@@ -8,16 +8,16 @@ import { productList } from "../data/Data";
 function ProductDetails() {
   // useParams
   const { id } = useParams();
-  // console.log(id); //1
+  
 
   const findProductData = productList.find((item) => item.id == id);
-  console.log(findProductData); //1
+  console.log("findProductData", findProductData); 
 
   return (
     <>
-      <div className=" sm:flex sm:px-28 sm:gap-3 sm:h-lvh">
+      <div className=" sm:flex sm:px-28 sm:gap-3  pb-20">
         {/* Left Side */}
-        <ImageSlider />
+        <ImageSlider images={findProductData.Images} />
 
         <div className="mt-7 px-2  sm:px-0 sm:mt-0 w-full sm:w-2/3">
           {/* Right side*/}
@@ -67,7 +67,10 @@ function ProductDetails() {
             Select Variant
           </p>
 
-          <ProductPriceList />
+          <ProductPriceList
+            liquiedData={findProductData.liquidData}
+            liquiedData1={findProductData.liquidData1}
+          />
         </div>
 
         <ProductAddToCard />

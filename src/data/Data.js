@@ -9,6 +9,72 @@ export const productList = [
     imageUrl:
       "https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg?format=auto&width=400&height=400",
     tag: "BEST SELLER",
+    liquidData: [
+      {
+        liquiedInUnite: "250ml",
+        liquiedAmout: "349.00",
+        liquiedAmoutWithAmout: "140 / 100 ml",
+      },
+      {
+        liquiedInUnite: "250ml",
+        liquiedAmout: "349.00",
+        liquiedAmoutWithAmout: "140 / 100 ml",
+      },
+      {
+        liquiedInUnite: "250ml",
+        liquiedAmout: "349.00",
+        liquiedAmoutWithAmout: "140 / 100 ml",
+      },
+    ],
+
+    liquidData1: [
+      {
+        liquiedInUnite: "250ml",
+        timmer: "7h : 32m : 37s",
+        liquiedAmout: "349.00",
+        liquiedOldPrice: "845",
+        liquiedDiscount: "40%",
+        liquiedAmoutWithAmout: "140 / 100 ml",
+      },
+      {
+        liquiedInUnite: "250ml",
+        timmer: "7h : 32m : 37s",
+        liquiedAmout: "349.00",
+        liquiedOldPrice: "845",
+        liquiedDiscount: "40%",
+        liquiedAmoutWithAmout: "140 / 100 ml",
+      },
+    ],
+
+    // images list
+    Images : {
+      mainImage:
+        "https://images.mamaearth.in/catalog/product/w/h/white_bg.jpg?format=auto&height=600",
+      chidlImages: [
+        {
+          id: 1,
+          imgUrl:
+            "https://images.mamaearth.in/catalog/product/o/n/onion-shampoo_3_1__7.jpg?format=auto&height=600",
+        },
+        {
+          id: 2,
+          imgUrl:
+            "https://images.mamaearth.in/catalog/product/o/n/onion-shampoo_4_8.jpg?format=auto&height=600",
+        },
+        {
+          id: 3,
+          imgUrl:
+            "https://images.mamaearth.in/catalog/product/o/n/onion-shampoo_6_7.jpg?format=auto&height=600",
+        },
+        {
+          id: 4,
+          imgUrl:
+            "https://images.mamaearth.in/catalog/product/o/n/onion-shampoo_7_5.jpg?format=auto&height=600",
+        },
+      ],
+    }
+       
+     
   },
   {
     id: 2,
