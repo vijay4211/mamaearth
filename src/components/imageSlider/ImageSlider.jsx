@@ -12,7 +12,7 @@ const ImageSlider = ({ images }) => {
           <div className=" hidden sm:flex gap-2 ">
             {images.chidlImages.map((subImage) => {
               return (
-                <div className="w-20  border-2">
+                <div key={subImage.id} className="w-20  border-2">
                   <img src={subImage.imgUrl} alt="" className="w-full" />
                 </div>
               );

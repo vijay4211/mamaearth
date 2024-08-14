@@ -4,10 +4,37 @@ import { FaPlus } from "react-icons/fa6";
 import { IoIosCheckmark } from "react-icons/io";
 
 function CheckoutPage() {
+  const checkoutDatas = [
+    {
+      imageUrl:
+        "https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg",
+      title:
+        " Onion Shampoo with Oninon & Plant Keratin for Hair Fall Control - 400ml",
+      priceCount: "599",
+    },
+    {
+      imageUrl:
+        "https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg",
+      title:
+        " Onion Shampoo with Oninon & Plant Keratin for Hair Fall Control - 400ml",
+      priceCount: "599",
+    },
+    {
+      imageUrl:
+        "https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg",
+      title:
+        " Onion Shampoo with Oninon & Plant Keratin for Hair Fall Control - 400ml",
+      priceCount: "599",
+    },
+  ];
+
   return (
     <>
       <div className="flex flex-col py-9 px-3 sm:px-28 sm:py-10 sm:flex sm:flex-row sm:gap-1 h-lvh">
         {/* left section */}
+
+
+      
         <div className=" w-full sm:w-4/6 sm:pr-16">
           <div className="flex justify-between">
             <div className="flex gap-1 items-center">
@@ -28,38 +55,50 @@ function CheckoutPage() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-2 py-4">
-            <div className="flex gap-1 h-20">
-              <div className="w-44 sm:w-20 px-1 border-gray-600">
-                <img
-                  src="https://images.mamaearth.in/catalog/product/w/i/with-ingredient.jpg"
-                  alt=""
-                  className=""
-                />
-              </div>
 
-              <div className=" gap-1 flex flex-col sm:gap-6">
-                <p className="text-xs font-medium text-gray-600">
-                  Onion Shampoo with Oninon & Plant Keratin for Hair Fall
-                  Control - 400ml
-                </p>
-                <span className="text-xs font-medium">&#8377;599</span>
-              </div>
-            </div>
+            {
+               checkoutDatas.map((checkoutData)=>{
+                  return(
+                    <div className="flex items-center justify-between gap-2 py-4">
+                    <div className="flex gap-1 h-20">
+                      <div className="w-44 sm:w-20 px-1 border-gray-600">
+                        <img src={checkoutData.imageUrl} alt="" className="" />
+                      </div>
+        
+                      <div className=" gap-1 flex flex-col sm:gap-6">
+                        <p className="text-xs font-medium text-gray-600">
+                          {checkoutData.title}
+                        </p>
+                        <span className="text-xs font-medium">
+                          &#8377;{checkoutData.priceCount}
+                        </span>
+                      </div>
+                    </div>
+        
+                    <div className="border border-gray-100 flex  sm:border-gray-300  sm:flex  sm:px-2 justify-center items-center  rounded-sm">
+                      <div className=" px-2 py-2 h-full text-xs  flex items-center ">
+                        <FiMinus />
+                      </div>
+                      <div className="px-3 py-2 h-full text-xs font-bold  flex items-center bg-gray-300">
+                        1
+                      </div>
+                      <div className=" px-2 py-2 h-full text-xs  flex items-center">
+                        <FaPlus />
+                      </div>
+                    </div>
+                  </div>
+                  )
+               })
+            }
+          
 
-            <div className="border border-gray-100 flex  sm:border-gray-300  sm:flex  sm:px-2 justify-center items-center  rounded-sm">
-              <div className=" px-2 py-2 h-full text-xs  flex items-center ">
-                <FiMinus />
-              </div>
-              <div className="px-3 py-2 h-full text-xs font-bold  flex items-center bg-gray-300">
-                1
-              </div>
-              <div className=" px-2 py-2 h-full text-xs  flex items-center">
-                <FaPlus />
-              </div>
-            </div>
-          </div>
+
+
+
         </div>
+
+
+
 
         {/* right section */}
         <div className=" sm:w-2/5  sm:pl-16">

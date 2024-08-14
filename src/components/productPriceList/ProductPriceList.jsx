@@ -1,14 +1,12 @@
 import React from "react";
 
 const ProductPriceList = ({ liquiedData, liquiedData1 }) => {
-
   return (
     <div className="overflow-auto flex gap-2 sm:flex sm:flex-wrap">
-
       <div className="flex sm:flex gap-2 mb-3">
-        {liquiedData.map((liquid) => {
+        {liquiedData.map((liquid, index) => {
           return (
-            <div className="border-2 border-green-600 rounded-xl">
+            <div key={index} className="border-2 border-green-600 rounded-xl">
               <p className=" px-3 py-1 rounded-tr-lg rounded-tl-lg font-semibold  bg-green-600 text-white">
                 {liquid.liquiedInUnite}
               </p>
@@ -26,9 +24,9 @@ const ProductPriceList = ({ liquiedData, liquiedData1 }) => {
       </div>
 
       <div className="flex gap-2">
-        {liquiedData1.map((liquid1) => {
+        {liquiedData1.map((liquid1, index) => {
           return (
-            <div className="border border-gray-400   rounded-xl">
+            <div key={index} className="border border-gray-400   rounded-xl">
               <p className="bg-gray-100 px-4 py-1 rounded-tr-xl rounded-tl-xl text-nowrap">
                 {liquid1.liquiedInUnite}{" "}
                 <span className="text-sm text-blue-500">{liquid1.timmer}</span>

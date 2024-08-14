@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
@@ -6,11 +6,19 @@ import earth from "../assets/img-1.svg";
 
 import { countContext } from "../App";
 import ListBar from "./ListBar";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const { name, setName } = useContext(countContext);
 
+  const navigator = useNavigate();
+
   function namehandler(event) {
     setName(event.target.value);
+  }
+
+  //card handler function
+  function cardHandler() {
+    navigator("/checkoutpage");
   }
 
   return (
@@ -65,12 +73,16 @@ const Navbar = () => {
         </div>
 
         <div className="flex gap-6">
-          <div className="flex items-center gap-2">
+          {/* work */}
+          <div
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={cardHandler}
+          >
             <IoCartOutline className="text-blue-300 text-2xl" />
             <h5 className="text-sm   hidden sm:block">Cart</h5>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <FiUser className="text-2xl text-blue-300" />
             <h5 className=" hidden sm:block"> Login</h5>
           </div>

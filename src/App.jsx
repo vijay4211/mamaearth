@@ -6,6 +6,7 @@ import HomeScreen from "./pages/HomeScreen";
 import ProductDetails from "./pages/ProductDetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CheckoutPage from "./pages/CheckoutPage";
+import LoginPage from "./pages/LoginPage";
 
 //create Context
 export const countContext = createContext();
@@ -23,6 +24,7 @@ function App() {
           <Route path="" element={<HomeScreen />} />
           <Route path="/productDetails/:id" element={<ProductDetails />} />
           <Route path="checkoutpage" element={<CheckoutPage />} />
+          <Route path="loginpage" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </countContext.Provider>
