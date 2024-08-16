@@ -1,6 +1,22 @@
+import { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  // define state
+  const [inputValue, setInputValue] = useState("");
+
+  function handleInputChange(event) {
+    console.log("event", event.target.value);
+    setInputValue(event.target.value);
+  }
+
+  const navigator = useNavigate();
+
+  function logiWithOtphandler() {
+    navigator("/signuppage");
+  }
+
   return (
     <>
       <div className=" sm:flex sm:justify-center">
@@ -16,9 +32,12 @@ function LoginPage() {
               <div className="p-3 border">+91</div>
               <div className="w-full border">
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile number"
                   className="p-3 w-full border-none outline-none"
+                  onChange={handleInputChange}
+                  value={inputValue}
+                  maxLength={10}
                 />
               </div>
             </div>
@@ -31,7 +50,10 @@ function LoginPage() {
                 Privacy Policy
               </p>
             </div>
-            <button className="bg-blue-500 py-3 w-full text-white font-semibold mt-4">
+            <button
+              className="bg-blue-500 py-3 w-full text-white font-semibold mt-4"
+              onClick={logiWithOtphandler}
+            >
               Login with OTP
             </button>
           </div>
